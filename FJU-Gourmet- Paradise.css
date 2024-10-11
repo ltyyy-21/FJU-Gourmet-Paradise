@@ -1,0 +1,204 @@
+/* 重置瀏覽器預設的 margin 和 padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #F9F7E6; /* 米黃色背景 */
+    font-family: 'Noto Sans TC', sans-serif; /* 繁體中文合適字體 */
+    color: #333;
+    margin: 1;
+    padding: 20px;
+}
+
+.hero {
+    height: 100vh;
+    background-image: url('images-1/food-tableware-ingredient-plate-recipe-cuisine-1639120-pxhere.com.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-text {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: white;
+}
+
+/* 搜尋欄樣式 */
+.search-bar {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-bar button {
+    padding: 10px;
+    margin-left: 10px;
+    background-color: #C68642;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* 美食類別區塊 */
+#menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+/* 美食類別格子樣式 */
+.food-category {
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* 確保遮罩不會超出格子 */
+}
+
+.food-category::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色遮罩 */
+    z-index: 1;
+}
+
+.food-category a {
+    position: relative;
+    z-index: 2;
+    font-size: 30px;
+    color: #ffffff; /* 將文字顏色改為白色，讓文字在深色背景上清晰可見 */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* 背景圖片的樣式 */
+.food-category {
+    background-size: cover;
+    background-position: center;
+}
+
+/* 依照每個分類的背景圖片 */
+.food-category:nth-child(1) {
+    background-image: url('image-3/sharp-dish-food-mediterranean-spice-chili-748234-pxhere.com.jpg');
+}
+
+.food-category:nth-child(2) {
+    background-image: url('image-3/dish-meal-food-meat-cuisine-soup-827828-pxhere.com.jpg');
+}
+
+.food-category:nth-child(3) {
+    background-image: url('image-3/dish-meal-food-seafood-fish-japan-851146-pxhere.com.jpg');
+}
+
+.food-category:nth-child(4) {
+    background-image: url('image-3/dish-meal-food-fish-lunch-cuisine-585623-pxhere.com.jpg');
+}
+
+.food-category:nth-child(5) {
+    background-image: url('image-3/53542613506_d2662c26f0_b.jpg');
+}
+
+.food-category:nth-child(6) {
+    background-image: url('image-3/fruit-sweet-glass-ripe-dish-meal-537517-pxhere.com.jpg');
+}
+
+
+/* 餐廳名稱（粉紅色） */
+h3 {
+    color: #FF69B4; /* 粉紅色 */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* 地點、營業時間、特色的樣式（黑色） */
+p {
+    color: #000; /* 黑色 */
+    line-height: 1.6; /* 增加行間距，讓內容更適合閱讀 */
+}
+.food-category img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+/* 餐廳文章 */
+#restaurants {
+    margin-top: 40px;
+}
+
+article {
+    margin-bottom: 40px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc; /* 增加分隔線讓視覺更清晰 */
+}
+
+/* 調整圖片的圓角和位置 */
+img {
+    max-width: 50%; 
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+
+/* 搜尋欄位置樣式 */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 響應式設計：適應不同裝置 */
+@media (max-width: 768px) {
+    #menu {
+        grid-template-columns: 1fr; /* 在小螢幕上，顯示單欄 */
+    }
+
+    .hero h1 {
+        font-size: 2em; /* 在小螢幕上縮小標題字體 */
+    }
+
+    .hero p {
+        font-size: 1.2em; /* 在小螢幕上縮小副標題字體 */
+    }
+}
