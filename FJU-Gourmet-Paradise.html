@@ -5,7 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>輔大美食天地</title>
     <link rel="stylesheet" href="FJU-Gourmet- Paradise.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+<script>
+    $(document).ready(function() {
+        // 美食類別懸停效果
+        $('.food-category').hover(
+            function() {
+                $(this).css({
+                    transform: 'scale(1.1)',
+                    transition: 'transform 0.3s'
+                });
+            },
+            function() {
+                $(this).css('transform', 'scale(1)');
+            }
+        );
+    });
+    
+</script>
 
 <body>
     <!-- 首頁橫幅區塊 -->
@@ -13,12 +31,6 @@
         <div class="hero-text">
             <h1>輔大美食天地</h1>
             <p>歡迎來到TY的美食天地，讓我們一起探索輔大周圍的美食吧！</p>
-            <div class="search-bar">
-                <form action="#menu" method="GET">
-                    <input type="text" placeholder="搜尋餐廳或食物種類..." id="searchInput">
-                    <button type="submit">搜尋</button>
-                </form>
-            </div>
         </div>
     </section>
 
