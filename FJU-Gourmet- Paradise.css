@@ -43,31 +43,6 @@ body {
     color: white;
 }
 
-/* 搜尋欄樣式 */
-.search-bar {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.search-bar input {
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    font-size: 16px;
-}
-
-.search-bar button {
-    padding: 10px;
-    margin-left: 10px;
-    background-color: #C68642;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
 /* 美食類別區塊 */
 #menu {
     display: grid;
@@ -201,4 +176,14 @@ header {
     .hero p {
         font-size: 1.2em; /* 在小螢幕上縮小副標題字體 */
     }
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
 }
